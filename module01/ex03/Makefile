@@ -1,7 +1,7 @@
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRCS = main.cpp
+SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp 
 		
 OBJS = $(SRCS:.cpp=.o)
 
