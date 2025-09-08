@@ -10,12 +10,12 @@ private:
     int                 value;
     static const int    fractionalBits;
 public:
-    Fixed();
-    Fixed(const Fixed& other);
-    ~Fixed();
-    Fixed &operator=(const Fixed &src);
-    int getRawBits(void) const;
-    void setRawBits(int const raw);
+    Fixed();//default constructor that initializes the fixed-point number to 0
+    Fixed(const Fixed& other);//copy constructor 
+    ~Fixed();//destructor
+    Fixed &operator=(const Fixed &src);//copy assignment operator overload
+    int getRawBits(void) const;//getter for the raw value
+    void setRawBits(int const raw);//setter for the raw value
 };
 
 
