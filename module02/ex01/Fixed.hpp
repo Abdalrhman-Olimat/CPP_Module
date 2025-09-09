@@ -11,8 +11,8 @@ private:
     static const int    fractionalBits;
 public:
     //constructors
-    Fixed();
-    Fixed(const Fixed& copy);
+    Fixed();// default constructor
+    Fixed(const Fixed& copy); 
 	Fixed(const int input);
 	Fixed(const float input);
     //destructor
