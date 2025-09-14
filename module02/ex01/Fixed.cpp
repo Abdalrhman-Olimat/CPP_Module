@@ -11,7 +11,7 @@ Fixed::Fixed(): value(0)
 Fixed::Fixed(const int input)
 {
 	std::cout << "Fixed Int Constructor called" << std::endl;
-	this->value = input << this->fractionalBits;
+	this->value = input << this->fractionalBits; 
 }
 
 Fixed::Fixed(const float input)
@@ -36,22 +36,24 @@ Fixed::~Fixed()
 Fixed &Fixed::operator=(const Fixed &src)
 {
 	std::cout << "Fixed Assignation operator called" << std::endl;
-	if (this != &src)
+	if (this != &src)// self-assignment check
 		this->value = src.getRawBits();
 
 	return *this;
 }
 
 // Public Methods
-float	Fixed::toFloat(void)const
-{
-	return ((float)this->value / (float)(1 << this->fractionalBits));
-}
 
 int	Fixed::toInt(void)const
 {
 	return (this->value >> this->fractionalBits);
 }
+
+float	Fixed::toFloat(void)const
+{
+	return ((float)this->value / (float)(1 << this->fractionalBits));
+}
+
 // Getter
 int	Fixed::getRawBits(void)const
 {
