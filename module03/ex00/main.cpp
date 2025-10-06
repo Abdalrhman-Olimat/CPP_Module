@@ -1,15 +1,18 @@
 #include "ClapTrap.hpp"
 
-int main() {
+int main()
+{
+// clap
+    ClapTrap clap1("clap");
+    ClapTrap clap2(clap1);
+    ClapTrap clap3;
     
-    ClapTrap claptrap1("CLTP");
-    ClapTrap claptrap2 = claptrap1;
-    ClapTrap claptrap3;
-    claptrap3 = claptrap1;
-
-    claptrap1.attack("target1");
-    claptrap2.takeDamage(5);
-    claptrap3.beRepaired(3);
-
+    clap3 = clap1;
+    clap1.attack("test clap 1");
+    clap1.takeDamage(5);
+    clap1.beRepaired(3);
+    clap1.takeDamage(10);
+    clap1.attack("test clap 2");
+    clap1.beRepaired(5);
     return 0;
 }
