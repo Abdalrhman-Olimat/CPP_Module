@@ -5,6 +5,7 @@
 #include <iostream>
 
 class ClapTrap{
+protected:
     std::string name;
     unsigned int hitPoints;//health
     unsigned int energyPoints;//energy
