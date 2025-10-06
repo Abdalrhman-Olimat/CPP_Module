@@ -1,7 +1,7 @@
 #ifndef SCAVTRAP_H
 #define SCAVTRAP_H
 
-#include "ClapTrap.h"
+#include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap {
 public:
